@@ -9,7 +9,7 @@
     require("dotenv").config();
     const axios = require("axios");
     const port = 3000;
-    const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCX9tnj1VcajxvIeJbmLcm4UtmyXLBJg4E`;
+    const GEMINI_URL = "URL";
 
     async function main() {
         await mongoose.connect('mongodb://127.0.0.1:27017/mediTrack');
@@ -23,6 +23,7 @@
         })
 
     app.set("view engine","ejs");
+    
     app.set("views",path.join(__dirname,"/views"))
     app.use(express.json());
     app.use(express.urlencoded({extended : true}));
